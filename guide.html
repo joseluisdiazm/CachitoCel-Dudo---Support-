@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CachitoCel Dudo App Instructions</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap">
+<style>
+/* Layout: one centered phone-width column; big images stacked, short title above each. */
+:root{
+  --bg:#0e3a32; --bg2:#185c4c; --ink:#eafff4; --mute:#a9d9c3;
+  --mint:#a0f8cc; --mint2:#68dca0; --deep:#083828;
+  --font-display:'Fredoka','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:dark;
+}
+body{background:var(--bg);background-image:linear-gradient(180deg,var(--bg) 0,var(--bg2) 100%);background-attachment:fixed;color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:14px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.1;margin:0;color:var(--mint);text-wrap:balance}
+.lede{margin:0;color:var(--mute);max-width:52ch}
+.toggle{display:inline-flex;border:2px solid var(--mint2);border-radius:999px;padding:3px;gap:2px}
+.toggle button{font:700 15px var(--font-body);color:var(--mint);background:transparent;border:0;border-radius:999px;padding:7px 18px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--mint);color:var(--deep)}
+.toggle button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+main{display:flex;flex-direction:column;gap:34px}
+figure{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+figcaption{font-family:var(--font-display);font-weight:500;font-size:1.25rem;color:var(--mint)}
+figure img{display:block;width:100%;height:auto;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.more{display:flex;flex-direction:column;gap:12px;padding:18px 20px;border-radius:20px;background:rgba(160,248,204,.12);border:2px solid var(--mint2)}
+.more p{margin:0}
+.more a{color:var(--mint);font-weight:700}
+footer{color:var(--mute);font-size:15px;display:flex;flex-wrap:wrap;gap:6px 18px}
+footer a{color:var(--mint)}
+.draft{font-size:13px;color:var(--mute);border:1px dashed var(--mint2);border-radius:10px;padding:6px 10px;align-self:flex-start}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="top">
+      <h1>CachitoCel: Dudo</h1>
+      <div class="toggle" role="group" aria-label="Language / Idioma">
+        <button id="b-en" type="button" aria-pressed="true">English</button>
+        <button id="b-es" type="button" aria-pressed="false">Español</button>
+      </div>
+    </div>
+    <p class="lede" data-lang="en">App instructions: a quick picture guide.</p>
+    <p class="lede" data-lang="es" hidden>Instrucciones de la app: una guía rápida con imágenes.</p>
+  </header>
+  <main>
+<figure lang="en" data-lang="en"><figcaption>Start here</figcaption><img src="guide-images/01-home-en.jpg" width="1200" height="802" alt="Start here" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Empieza aquí</figcaption><img src="guide-images/01-home-es.jpg" width="1200" height="802" alt="Empieza aquí" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Host: name your game</figcaption><img src="guide-images/02-host-en.jpg" width="1290" height="665" alt="Host: name your game" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Anfitrión: ponle nombre a tu partida</figcaption><img src="guide-images/02-host-es.jpg" width="1290" height="665" alt="Anfitrión: ponle nombre a tu partida" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Join: find the game</figcaption><img src="guide-images/03-find-en.jpg" width="1300" height="884" alt="Join: find the game" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Entrar: busca la partida</figcaption><img src="guide-images/03-find-es.jpg" width="1300" height="884" alt="Entrar: busca la partida" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Waiting to get in</figcaption><img src="guide-images/04-knock-en.jpg" width="1200" height="890" alt="Waiting to get in" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Esperando para entrar</figcaption><img src="guide-images/04-knock-es.jpg" width="1200" height="890" alt="Esperando para entrar" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Host: let players in</figcaption><img src="guide-images/05-join-en.jpg" width="1180" height="1186" alt="Host: let players in" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Anfitrión: deja entrar a los jugadores</figcaption><img src="guide-images/05-join-es.jpg" width="1180" height="1186" alt="Anfitrión: deja entrar a los jugadores" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Players and dice</figcaption><img src="guide-images/06-initials-en.jpg" width="1300" height="770" alt="Players and dice" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Jugadores y dados</figcaption><img src="guide-images/06-initials-es.jpg" width="1300" height="786" alt="Jugadores y dados" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Turn order</figcaption><img src="guide-images/07-order-en.jpg" width="1300" height="453" alt="Turn order" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Orden de los turnos</figcaption><img src="guide-images/07-order-es.jpg" width="1300" height="453" alt="Orden de los turnos" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Wild aces</figcaption><img src="guide-images/08-trios-wild-en.jpg" width="1300" height="687" alt="Wild aces" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Ases comodín</figcaption><img src="guide-images/08-trios-wild-es.jpg" width="1300" height="687" alt="Ases comodín" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Round result</figcaption><img src="guide-images/09-banner-en.jpg" width="1300" height="581" alt="Round result" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Resultado de la ronda</figcaption><img src="guide-images/09-banner-es.jpg" width="1300" height="581" alt="Resultado de la ronda" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>One die left</figcaption><img src="guide-images/10-flame-en.jpg" width="1300" height="637" alt="One die left" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Un solo dado</figcaption><img src="guide-images/10-flame-es.jpg" width="1300" height="636" alt="Un solo dado" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Out, but still watching</figcaption><img src="guide-images/11-spectating-en.jpg" width="1300" height="394" alt="Out, but still watching" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Fuera, pero mirando</figcaption><img src="guide-images/11-spectating-es.jpg" width="1300" height="449" alt="Fuera, pero mirando" loading="lazy"></figure>
+<figure lang="en" data-lang="en"><figcaption>Help, any time</figcaption><img src="guide-images/12-help-en.jpg" width="1100" height="815" alt="Help, any time" loading="lazy"></figure>
+<figure lang="es" data-lang="es" hidden><figcaption>Ayuda en cualquier momento</figcaption><img src="guide-images/12-help-es.jpg" width="1120" height="835" alt="Ayuda en cualquier momento" loading="lazy"></figure>
+  </main>
+  <section class="more">
+    <p data-lang="en">Want the full rules? <a href="https://joseluisdiazm.github.io/CachitoCel-Dudo---Support-/">Read How to Play</a></p>
+    <p data-lang="es" hidden>¿Quieres las reglas completas? <a href="https://joseluisdiazm.github.io/CachitoCel-Dudo---Support-/">Lee Cómo jugar</a></p>
+  </section>
+  <footer>
+    <a href="https://joseluisdiazm.github.io/CachitoCel-Dudo---Support-/">Support / Soporte</a>
+    <a href="https://joseluisdiazm.github.io/CachitoCel-Dudo---Support-/privacy.html">Privacy / Privacidad</a>
+  </footer>
+</div>
+<script>
+(function(){
+  var cur='en';
+  try{var s=localStorage.getItem('guideLang'); if(s==='en'||s==='es')cur=s; else if((navigator.language||'').toLowerCase().indexOf('es')===0)cur='es';}catch(e){
+    if((navigator.language||'').toLowerCase().indexOf('es')===0)cur='es';}
+  function apply(l){
+    cur=l;
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-lang]').forEach(function(el){el.hidden=el.getAttribute('data-lang')!==l;});
+    document.getElementById('b-en').setAttribute('aria-pressed',String(l==='en'));
+    document.getElementById('b-es').setAttribute('aria-pressed',String(l==='es'));
+    try{localStorage.setItem('guideLang',l);}catch(e){}
+  }
+  document.getElementById('b-en').addEventListener('click',function(){apply('en')});
+  document.getElementById('b-es').addEventListener('click',function(){apply('es')});
+  apply(cur);
+})();
+</script>
+
+</body>
+</html>
